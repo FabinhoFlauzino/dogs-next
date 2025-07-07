@@ -18,8 +18,6 @@ export default async function login(state: {}, formData: FormData) {
       body: formData
     })
 
-    console.log(response)
-
     if (!response.ok) throw new Error("Senha ou usuário inválidos.")
 
     const data = await response.json()
