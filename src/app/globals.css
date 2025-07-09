@@ -111,6 +111,11 @@ a {
   margin: 1rem 0;
 }
 
+.success {
+  color: #289010;
+  margin: 1rem 0;
+}
+
 .button {
   font-size: 1rem;
   font-family: var(--type-first);
