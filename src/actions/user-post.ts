@@ -12,8 +12,8 @@ export default async function userPost(state: {}, formData: FormData) {
   try {
     if (!username || !password || !email) throw new Error("Preencha os dados.")
 
-    if(username.trim().length < 3) throw new Error("O nome deve ter pelo menos 3 caracteres.")
-    if(password.length < 6) throw new Error("Senha deve ter mais de 6 digitos")
+    if (username.trim().length < 3) throw new Error("O nome deve ter pelo menos 3 caracteres.")
+    if (password.length < 6) throw new Error("Senha deve ter mais de 6 digitos")
 
     const { url } = USER_POST()
 
@@ -24,12 +24,12 @@ export default async function userPost(state: {}, formData: FormData) {
 
     if (!response.ok) throw new Error("Email ou usuário já cadastrado.")
 
-    const {ok} = await login({
+    const { ok } = await login({
       ok: true,
       error: ''
     }, formData)
 
-    if(!ok) throw new Error("Erro ao entrar.") 
+    if (!response.ok) throw new Error("Erro ao entrar.")
 
     return {
       data: null,
