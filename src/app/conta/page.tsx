@@ -1,9 +1,11 @@
-"use client"
+import { Metadata } from "next"
 
-import { useUser } from "@/context/userContext"
+export const metadata: Metadata = {
+  title: "Minha Conta",
+
+}
 
 export default function ContaPage() {
-  const { user } = useUser()
   return (
     <div></div>
   )
